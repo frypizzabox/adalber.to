@@ -1,19 +1,34 @@
 /* Module Configuration */
 angular.
     module('adalber.to').
-    config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
 
-            /* Most common prefix */
-            $locationProvider.hashPrefix('!');
+        /* Route Configuration */
+        config(['$locationProvider', '$routeProvider',
+            function config($locationProvider, $routeProvider) {
 
-            $routeProvider.
-                when('/home', {
-                    template: '<span>Home</span>'
-                }).
-                when('/about', {
-                   template: '<span>About</span>'
-                }).
-                otherwise('/home');
-        }
-    ]);
+                // Most common prefix
+                $locationProvider.hashPrefix('!');
+
+                $routeProvider.
+                    when('/home', {
+                        template: '<span>Home</span>'
+                    }).
+                    when('/projects', {
+                        template: '<span>Projects</span>'
+                    }).
+                    when('/about', {
+                        template: '<span>About</span>'
+                    }).
+                    otherwise('/home');
+
+            }
+        ]).
+
+        /* Theme Configuration */
+        config(function($mdThemingProvider) {
+            $mdThemingProvider.theme('default')
+                .primaryPalette('blue-grey')
+                .accentPalette('blue-grey')
+                .warnPalette('blue-grey')
+                .backgroundPalette('blue-grey');
+        });

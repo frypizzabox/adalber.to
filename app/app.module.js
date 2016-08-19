@@ -1,4 +1,6 @@
 /* Module Declaration */
-angular.module('adalber.to', [
-    'ngRoute'
-]);
+angular.
+    module('adalber.to', [
+        'ngMaterial',
+        'ngRoute'
+    ]);

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <!-- Page Basic Config -->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,16 +24,38 @@
     <!-- Project Libraries -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+    <script src="app/topbar/topbar.controller.js"></script>
 
     <!-- Angular Material Style Sheet -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
 
   </head>
-  <!-- Bootstrap Application -->
+
+  <!-- Application -->
   <body ng-app="adalber.to" ng-cloak>
-    <!-- View Declaration -->
-    <div ng-view></div>
-    <!-- View Declaration -->
-    <div ng-view></div>
+
+    <!-- Material Content Declaration -->
+    <md-content>
+
+      <!-- Navegation Bar Declaration -->
+      <md-toolbar class="md-padding">
+        <h2>Adalberto Aucar Kutuxidis</h2>
+      </md-toolbar>
+
+      <div ng-controller="TopBarCtrl">
+      <!-- Navegation TopBar Declaration -->
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+          <md-nav-item
+            ng-repeat="item in navItems"
+            md-nav-href="{{item.href}}"
+            name="{{item.name}}">{{item.title}}
+          </md-nav-item>
+        </md-nav-bar>
+      </div>
+
+      <!-- View Declaration -->
+      <div ng-view></div>
+
+    </md-content>
   </body>
 </html>
