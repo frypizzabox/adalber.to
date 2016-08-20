@@ -1,12 +1,12 @@
 <div ng-repeat="rows in homeList" layout-gt-sm="row" layout="column" class="md-margin">
   <md-card ng-repeat="item in rows" layout="column" flex>
     <img ng-src="{{item.imgSrc}}" class="md-card-image" alt="{{item.imgName}}"/>
-    <md-card-title>
-      <md-card-title-text layout="column">
+    <md-card-title layout="column" flex>
+      <md-card-title-text>
         <span class="md-headline">{{item.title}}</span>
       </md-card-title-text>
+      <md-card-content ng-bind-html="item.content | renderHTMLCorrectly" flex></md-card-content>
     </md-card-title>
-    <md-card-content ng-bind-html="item.content | renderHTMLCorrectly"></md-card-content>
     <div layout="row" layout-align="center start">
       <div flex class="md-padding">
         <span class="md-subhead" flex>{{item.date}}</span>
