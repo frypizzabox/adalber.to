@@ -11,7 +11,8 @@ angular.
 
                 $routeProvider.
                     when('/home', {
-                        template: '<span>Home</span>'
+                        templateUrl: 'app/home/home.template.html',
+                        controller: HomeCtrl
                     }).
                     when('/projects', {
                         template: '<span>Projects</span>'

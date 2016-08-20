@@ -2,7 +2,7 @@
 TopBarProvider = function() {
 
     // Navigation links list
-    navItems = [
+    var list = [
         {
             title: 'Home',
             name: 'home',
@@ -23,7 +23,7 @@ TopBarProvider = function() {
     return {
         $get: function() {
             return {
-                navItems: navItems
+                list: list
             };
         }
     };

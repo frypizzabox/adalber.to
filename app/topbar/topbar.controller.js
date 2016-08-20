@@ -2,11 +2,11 @@
 TopBarCtrl = function($scope, $topBar) {
 
     // Get Navigation links list from provider
-    navItems = $topBar.navItems;
+    var navList = $topBar.list;
 
     // Passing values to scope
-    $scope.navItems = navItems;
-    $scope.currentNavItem = navItems[0].name;
+    $scope.navList = navList;
+    $scope.currentNavItem = navList[0].name;
 };
 
 /* Controller Declaration */

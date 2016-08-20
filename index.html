@@ -21,15 +21,19 @@
     <!-- Angular Material Library -->
     <script src="bower_components/angular-material/angular-material.min.js"></script>
 
-    <!-- Project Libraries / Settings -->
+    <!-- Project Libraries / Module-->
     <script src="app/app.module.js"></script>
-    <script src="app/app.config.js"></script>
 
     <!-- Project Libraries / Controllers-->
     <script src="app/topbar/topbar.provider.js"></script>
+    <script src="app/home/home.provider.js"></script>
 
     <!-- Project Libraries / Controllers-->
     <script src="app/topbar/topbar.controller.js"></script>
+    <script src="app/home/home.controller.js"></script>
+
+    <!-- Project Libraries / Configuration -->
+    <script src="app/app.config.js"></script>
 
     <!-- Angular Material Style Sheet -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
@@ -39,28 +43,24 @@
   <!-- Application -->
   <body ng-app="adalber.to" ng-cloak>
 
-    <!-- Material Content Declaration -->
-    <md-content>
+    <!-- TopBar Declaration -->
+    <md-toolbar class="md-padding">
+      <h2>Adalberto Aucar Kutuxidis</h2>
+    </md-toolbar>
 
-      <!-- Navegation Bar Declaration -->
-      <md-toolbar class="md-padding">
-        <h2>Adalberto Aucar Kutuxidis</h2>
-      </md-toolbar>
+    <!-- Navegation TopBar Declaration -->
+    <div ng-controller="TopBarCtrl">
+      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item
+          ng-repeat="item in navList"
+          md-nav-href="{{item.href}}"
+          name="{{item.name}}">{{item.title}}
+        </md-nav-item>
+      </md-nav-bar>
+    </div>
 
-      <div ng-controller="TopBarCtrl">
-      <!-- Navegation TopBar Declaration -->
-        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-          <md-nav-item
-            ng-repeat="item in navItems"
-            md-nav-href="{{item.href}}"
-            name="{{item.name}}">{{item.title}}
-          </md-nav-item>
-        </md-nav-bar>
-      </div>
+    <!-- View Declaration -->
+    <div ng-view></div>
 
-      <!-- View Declaration -->
-      <div ng-view></div>
-
-    </md-content>
   </body>
 </html>

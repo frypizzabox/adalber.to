@@ -1,0 +1,15 @@
+<div layout="row" layout-align="space-between start">
+  <md-card ng-repeat="item in homeList" layout="column" flex>
+    <md-card-title>
+      <md-card-title-text layout="column">
+        <span class="md-headline">{{item.title}}</span>
+        <span class="md-subhead">{{item.date}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <img ng-src="{{item.imgSrc}}" class="md-card-image" alt="{{item.imgName}}"/>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button>Action 1</md-button>
+      <md-button>Action 2</md-button>
+    </md-card-actions>
+  </md-card>
+</div>
