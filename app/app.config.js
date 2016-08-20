@@ -25,6 +25,14 @@ angular.
             }
         ]).
 
+        filter('renderHTMLCorrectly', function($sce)
+        {
+            return function(stringToParse)
+            {
+                return $sce.trustAsHtml(stringToParse);
+            }
+        }).
+
         /* Theme Configuration */
         config(function($mdThemingProvider) {
             $mdThemingProvider.theme('default')
