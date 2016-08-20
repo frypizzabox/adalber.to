@@ -42,26 +42,28 @@
   </head>
 
   <!-- Application -->
-  <body ng-app="adalber.to" ng-cloak>
+  <body ng-app="adalber.to" layout="column" ng-cloak>
 
-    <!-- TopBar Declaration -->
-    <md-toolbar class="md-padding">
-      <h2>Adalberto Aucar Kutuxidis</h2>
-    </md-toolbar>
+    <header>
+      <!-- TopBar Declaration -->
+      <md-toolbar class="md-padding" flex>
+        <h2>Adalberto Aucar Kutuxidis</h2>
+      </md-toolbar>
 
-    <!-- Navegation TopBar Declaration -->
-    <div ng-controller="TopBarCtrl">
-      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item
-          ng-repeat="item in navList"
-          md-nav-href="{{item.href}}"
-          name="{{item.name}}">{{item.title}}
-        </md-nav-item>
-      </md-nav-bar>
-    </div>
+      <!-- Navegation TopBar Declaration -->
+      <nav ng-controller="TopBarCtrl" flex>
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+          <md-nav-item
+            ng-repeat="item in navList"
+            md-nav-href="{{item.href}}"
+            name="{{item.name}}">{{item.title}}
+          </md-nav-item>
+        </md-nav-bar>
+      </nav>
+    </header>
 
     <!-- View Declaration -->
-    <div ng-view></div>
+    <section ng-view style="overflow: auto;" flex></section>
 
   </body>
 </html>

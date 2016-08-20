@@ -1,4 +1,4 @@
-<div ng-repeat="rows in homeList" layout-gt-sm="row" layout="column" class="md-margin">
+<div class="md-margin" ng-repeat="rows in homeList" layout-gt-sm="row" layout="column">
   <md-card ng-repeat="item in rows" layout="column" flex>
     <img ng-src="{{item.imgSrc}}" class="md-card-image" alt="{{item.imgName}}"/>
     <md-card-title layout="column" flex>
