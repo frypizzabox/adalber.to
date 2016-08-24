@@ -1,0 +1,14 @@
+.home-box-title {
+    padding: 0px;
+}
+
+.home-box-title md-card-title-text {
+    background-color: rgb(68, 138, 255);
+    display: inline-table;
+    border-radius: 0px 0px 2px 0px;
+}
+
+.home-box-title md-card-title-text span {
+    display: block;
+    color: #FFF;
+}

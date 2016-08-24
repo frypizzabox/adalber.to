@@ -1,5 +1,5 @@
 /* HomeCtrl Declaration */
-HomeCtrl = function($scope, $home) {
+HomeCtrl = function($scope, $location, $home) {
 
     // Get Home content list from provider
     var homeList = $home.list;
@@ -7,9 +7,13 @@ HomeCtrl = function($scope, $home) {
     // Passing values to scope
     $scope.homeList = homeList;
 
+    $scope.goToPage = function(id) {
+        $location.path('/post/' + id);
+    };
+
 };
 
-/* Controller Declaration */
+/* Controller Configuration */
 angular.
     module('adalber.to').
-        controller('HomeCtrl', ['$scope', '$home', HomeCtrl]);
+        controller('HomeCtrl', ['$scope', '$location', '$home',  HomeCtrl]);

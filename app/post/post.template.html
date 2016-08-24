@@ -1,0 +1,4 @@
+<div layout="column" flex>
+  <img ng-src="{{post.imgSrc}}" class="md-card-image" alt="{{post.imgName}}" flex/>
+  <md-content ng-bind-html="post.content | renderHTMLCorrectly" flex></md-content>
+</div>
