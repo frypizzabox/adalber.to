@@ -1,14 +1,49 @@
-.home-box-title {
+.home-line {
+    background-color: rgba(0, 0, 0, 0.12);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 1px 0px;
+}
+
+.card {
+    /*
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.05);
+    */
+    box-shadow: none;
+    margin: 0px 0.5px;
+    padding: 16px;
+    border-radius: 0px;
+}
+
+.card:hover {
+    /*
+    box-shadow: 4px 4px 4px 1px rgba(68, 138, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    */
+}
+
+.card .home-box-title {
+    padding: 0px;
+    margin: -5px 0px 0px -5px;
+}
+
+.card .home-box-title md-card-title-text {
+    background-color: rgb(68, 138, 255);
+    display: inline-table;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+.card .home-box-title md-card-title-text span {
+    display: block;
+    color: #FFF;
+}
+
+.card .home-box-title md-card-title-text .md-subhead {
     padding: 0px;
 }
 
-.home-box-title md-card-title-text {
-    background-color: rgb(68, 138, 255);
-    display: inline-table;
-    border-radius: 0px 0px 2px 0px;
-}
-
-.home-box-title md-card-title-text span {
-    display: block;
-    color: #FFF;
+nav {
+    margin-top: -1px;
 }
