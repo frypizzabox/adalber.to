@@ -1,7 +1,7 @@
-/* HomeProvider Declaration */
-HomeProvider = function() {
+/* GalleryListProvider Declaration */
+GalleryListProvider = function() {
 
-    // Home Content list
+    // GalleryListProvider Content list
     var list = [
 
         [
@@ -9,34 +9,34 @@ HomeProvider = function() {
                 id: 0,
                 title: 'The Webpage',
                 date: '20/08/2016',
-                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor...</p>',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
                 id: 1,
                 title: 'The Learning Curve',
                 date: '20/08/2016',
-                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor...</p>',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
                 id: 2,
                 title: 'asdasdasdasdasdasdasd',
                 date: '20/08/2016',
-                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor...</p>',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             }
         ],
         [
             {
                 id: 3,
-                title: 'Hello Word',
+                title: 'Samsung School',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
@@ -44,7 +44,7 @@ HomeProvider = function() {
                 title: 'Hello Word',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
@@ -52,7 +52,7 @@ HomeProvider = function() {
                 title: 'Hello Word',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             }
         ],
@@ -62,7 +62,7 @@ HomeProvider = function() {
                 title: 'Hello Word',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
@@ -70,7 +70,7 @@ HomeProvider = function() {
                 title: 'Hello Word',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             },
             {
@@ -78,7 +78,7 @@ HomeProvider = function() {
                 title: 'Hello Word',
                 date: '20/08/2016',
                 content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida. Cras sagittis augue et justo ornare varius. Nam mattis tempor eleifend. Donec tincidunt, turpis non tristique maximus, est nunc finibus sem, sed rhoncus eros magna quis erat. Curabitur viverra turpis at eros congue, nec mollis justo rhoncus. Phasellus pharetra tincidunt mattis. Praesent elementum molestie orci at commodo. Sed facilisis mi justo, et luctus nibh egestas ac. Praesent quis accumsan arcu.</p>',
-                imgSrc: 'app/home/washedout.png',
+                imgSrc: 'app/gallery-list/washedout.png',
                 imgName: 'Washed Out'
             }
         ]
@@ -93,7 +93,7 @@ HomeProvider = function() {
     };
 };
 
-/* Controller Declaration */
+/* Provider Declaration */
 angular.
     module('adalber.to').
-        provider('$home', HomeProvider);
+        provider('$gallerylist', GalleryListProvider);

@@ -1,4 +1,4 @@
-<div class="home-line md-padding" ng-repeat="rows in homeList" layout-gt-sm="row" layout="column">
+<div class="gallery-line md-padding" ng-repeat="rows in gallerylist" layout-gt-sm="row" layout="column">
   <md-card class="card" ng-repeat="item in rows" ng-click="goToPage(item.id)" layout="column" flex>
     <div style="background: url('{{item.imgSrc}}') no-repeat;
       background-position: center center; background-size: cover; min-height: 300px; border-radius: 0px 0px 0px 0px;"

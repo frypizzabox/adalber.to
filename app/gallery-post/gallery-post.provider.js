@@ -1,5 +1,5 @@
-/* PostProvider Declaration */
-PostProvider = function() {
+/* GalleryPostProvider Declaration */
+GalleryPostProvider = function() {
 
     // Post Content
     var post = {
@@ -22,4 +22,4 @@ PostProvider = function() {
 /* Controller Declaration */
 angular.
     module('adalber.to').
-        provider('$post', PostProvider);
+        provider('$gallerypost', GalleryPostProvider);

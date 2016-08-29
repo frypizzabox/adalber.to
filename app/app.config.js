@@ -11,18 +11,19 @@ angular.
 
                 $routeProvider.
                     when('/home', {
-                        templateUrl: 'app/home/home.template.html',
-                        controller: HomeCtrl
+                        templateUrl: 'app/gallery-list/gallery-list.template.html',
+                        controller: GalleryListCtrl
                     }).
                     when('/projects', {
-                        template: '<span>Projects</span>'
+                        templateUrl: 'app/gallery-list/gallery-list.template.html',
+                        controller: GalleryListCtrl
                     }).
                     when('/about', {
                         template: '<span>About</span>'
                     }).
                     when('/post/:postId', {
-                        templateUrl: 'app/post/post.template.html',
-                        controller: PostCtrl
+                        templateUrl: 'app/gallery-post/gallery-post.template.html',
+                        controller: GalleryPostCtrl
                     }).
                     otherwise('/home');
 
