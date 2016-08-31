@@ -1,3 +1,7 @@
+nav {
+    margin-top: -1px;
+}
+
 .gallery-line {
     background-color: rgba(0, 0, 0, 0.12);
     margin: 0px 0px 0px -1px;
@@ -5,21 +9,15 @@
 }
 
 .gallery-line .card {
-    /*
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.05);
-    */
-    box-shadow: none;
+   box-shadow: none;
     margin: 0px 0px 0px 1px;
     padding: 16px;
     border-radius: 0.5px;
 }
 
 .gallery-line .card:hover {
-    /*
-    box-shadow: 4px 4px 4px 1px rgba(68, 138, 255, 0.75);
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
-    */
 }
 
 .gallery-line .card .home-box-title {
@@ -44,15 +42,6 @@
     padding: 0px;
 }
 
-.gallery-line .card.fullscreen{
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 166px;
-    left: 0;
-}
-
-nav {
-    margin-top: -1px;
+.gallery-line .card.hide{
+    display: none;
 }

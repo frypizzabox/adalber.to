@@ -31,8 +31,7 @@ angular.
         ]).
 
         /* Filter Configuration */
-        filter('renderHTMLCorrectly', function($sce)
-        {
+        filter('renderHTMLCorrectly', function($sce) {
             return function(stringToParse)
             {
                 return $sce.trustAsHtml(stringToParse);
