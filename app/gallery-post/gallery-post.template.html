@@ -1,4 +1,12 @@
-<div layout="column" flex>
-  <img ng-src="{{post.imgSrc}}" class="md-card-image" alt="{{post.imgName}}" flex/>
-  <md-content ng-bind-html="post.content | renderHTMLCorrectly" flex></md-content>
+<div class="gallery-post md-margin" layout="column">
+  <div class="box-title" layout="column" flex>
+    <span class="md-headline" flex>{{post.title}}</span>
+    <span class="md-subhead">{{post.date}}</span>
+  </div>
+  <div style="background: url('{{post.imgSrc}}') no-repeat;
+    background-position: center center; background-size: cover; min-height: 480px;
+    border-radius: 0px 0px 0px 0px;"
+    flex="none">
+  </div>
+  <md-content class="md-padding" ng-bind-html="post.content | renderHTMLCorrectly" flex></md-content>
 </div>

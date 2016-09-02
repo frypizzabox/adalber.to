@@ -9,20 +9,20 @@ nav {
 }
 
 .gallery-line .card {
-   box-shadow: none;
+    box-shadow: none;
     margin: 0px 0px 0px 1px;
     padding: 16px;
     border-radius: 0.5px;
 }
 
 .gallery-line .card:hover {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
     cursor: pointer;
 }
 
 .gallery-line .card .home-box-title {
     padding: 0px;
-    margin: -5px 0px 0px -5px;
+    margin: -4px 0px 0px -4px;
 }
 
 .gallery-line .card .home-box-title md-card-title-text {
@@ -44,4 +44,24 @@ nav {
 
 .gallery-line .card.hide{
     display: none;
+}
+
+.gallery-post {
+    margin: 12px 12px 0px 12px;
+}
+
+.gallery-post .box-title {
+    background-color: rgb(68, 138, 255);
+
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+}
+
+.gallery-post .box-title span {
+    display: block;
+    color: #FFF;
+}
+
+.gallery-post .box-title .md-subhead {
+    padding: 0px;
 }
