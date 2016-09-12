@@ -1,7 +1,13 @@
+/*
+General
+*/
 nav {
     margin-top: -1px;
 }
 
+/*
+Gallery - Line
+*/
 .gallery-line {
     background-color: rgba(0, 0, 0, 0.12);
     margin: 0px 0px 0px -1px;
@@ -46,6 +52,9 @@ nav {
     display: none;
 }
 
+/*
+Gallery - Post
+*/
 .gallery-post {
     margin: 12px 12px 0px 12px;
 }
@@ -63,5 +72,28 @@ nav {
 }
 
 .gallery-post .box-title .md-subhead {
+    padding: 0px;
+}
+
+/*
+Gallery - Links
+*/
+.gallery-links {
+    margin: 12px 12px 0px 0px;
+}
+
+.gallery-links .box-title {
+    background-color: rgb(68, 138, 255);
+
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+}
+
+.gallery-links .box-title span {
+    display: block;
+    color: #FFF;
+}
+
+.gallery-links .box-title .md-subhead {
     padding: 0px;
 }
