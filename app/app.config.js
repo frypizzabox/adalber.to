@@ -1,3 +1,6 @@
+/* Basic Config */
+var pageOwner = 'Adalberto Kutuxidis';
+
 /* Module Configuration */
 angular.
     module('adalber.to').
@@ -11,14 +14,17 @@ angular.
 
                 $routeProvider.
                     when('/home', {
+                        pageTitle: 'Home',
                         templateUrl: 'app/gallery-list/gallery-list.template.html',
                         controller: GalleryListCtrl
                     }).
                     when('/projects', {
+                        pageTitle: 'Projects',
                         templateUrl: 'app/gallery-list/gallery-list.template.html',
                         controller: GalleryListCtrl
                     }).
                     when('/about', {
+                        pageTitle: 'About',
                         template: '<span>About</span>'
                     }).
                     when('/post/:postId', {
@@ -30,16 +36,29 @@ angular.
             }
         ]).
 
+        /* Run Configuration */
+        run(['$rootScope', function ($rootScope) {
+
+            $rootScope.pageOwner = pageOwner;
+
+            $rootScope.$on('$routeChangeSuccess',
+                function (event, current, previous) {
+                    $rootScope.pageTitle =
+                        pageOwner + '/' + current.$$route.pageTitle;
+                }
+            );
+        }]).
+
         /* Filter Configuration */
         filter('renderHTMLCorrectly', function($sce) {
-            return function(stringToParse)
+            return function (stringToParse)
             {
                 return $sce.trustAsHtml(stringToParse);
             }
         }).
 
         /* Theme Configuration */
-        config(function($mdThemingProvider) {
+        config(function ($mdThemingProvider) {
 
             $mdThemingProvider.definePalette('black', {
                 '50': '#858585',

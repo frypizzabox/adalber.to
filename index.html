@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="en">
+
+<!-- Application -->
+<html ng-app="adalber.to" lang="en">
   <head>
 
     <!-- Page Basic Config -->
@@ -7,7 +9,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Webpage Stuff -->
-    <title>Adalberto Kutuxidis</title>
+    <title ng-bind="pageTitle"></title>
     <meta name="description" content="Adalberto Kutuxidise">
     <meta name="author" content="Adalberto Kutuxidis">
 
@@ -45,14 +47,12 @@
     <link rel="stylesheet" href="app/style.css">
 
   </head>
-
-  <!-- Application -->
-  <body ng-app="adalber.to" layout="column" ng-cloak>
+  <body layout="column" ng-cloak>
 
     <header>
       <!-- TopBar Declaration -->
       <md-toolbar class="md-padding" flex>
-        <h2>Adalberto Kutuxidis</h2>
+        <h2 ng-bind="pageOwner"></h2>
       </md-toolbar>
 
       <!-- Navegation TopBar Declaration -->
