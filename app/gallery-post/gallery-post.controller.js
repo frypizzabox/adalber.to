@@ -2,7 +2,6 @@
 GalleryPostCtrl = function($scope, $gallerypost) {
 
     $scope.post = $gallerypost.post;
-
 };
 
 /* Controller Configuration */

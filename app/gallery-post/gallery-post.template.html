@@ -18,19 +18,20 @@
       </div>
       <md-list flex="none" ng-repeat="relevantLink in post.relevantLinks">
         <md-subheader>{{relevantLink.category}}</md-subheader>
-        <md-list-item class="md-3-line" ng-click="null"
-          ng-repeat="item in relevantLink.linkList">
-          <div style="background: url('{{item.imgSrc}}') no-repeat;
-            background-position: center center; background-size: cover; min-height: 90px; min-width: 180px;
-            border-radius: 0px 0px 0px 0px;"
-            flex="none">
-          </div>
-          <div class="md-list-item-text md-padding" layout="column" flex="none">
-            <h3>{{item.title}}</h3>
-            <h4>{{item.date}}</h4>
-            <p ng-bind-html="item.content | renderHTMLCorrectly"></p>
-          </div>
-        </md-list-item>
+        <div ng-repeat="item in relevantLink.linkList">
+          <md-list-item class="md-3-line" ng-href="{{item.link}}">
+            <div style="background: url('{{item.imgSrc}}') no-repeat;
+              background-position: center center; background-size: cover; min-height: 90px; min-width: 180px;
+              border-radius: 0px 0px 0px 0px;"
+              flex="none">
+            </div>
+            <div class="md-list-item-text md-padding" layout="column" flex="none">
+              <h3>{{item.title}}</h3>
+              <h4>{{item.date}}</h4>
+              <p ng-bind-html="item.content | renderHTMLCorrectly"></p>
+            </div>
+          </md-list-item>
+        </div>
       </md-list>
     </div>
   </div>
