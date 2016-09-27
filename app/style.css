@@ -72,19 +72,20 @@ Gallery - Post
 }
 
 .gallery-post .box-title .md-subhead {
-    padding: 0px;
+    padding: 5px 0px 0px 0px;
 }
 
 /*
 Gallery - Links
 */
 .gallery-links {
-    margin: 12px 12px 0px 0px;
+    margin: 12px 12px 0px 12px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.12);
 }
 
 .gallery-links .box-title {
     background-color: rgb(68, 138, 255);
-
     border-radius: 0px 0px 0px 0px;
     padding: 10px;
 }
@@ -94,6 +95,61 @@ Gallery - Links
     color: #FFF;
 }
 
-.gallery-links .box-title .md-subhead {
-    padding: 0px;
+.gallery-links md-list {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+
+.gallery-links md-list .md-subheader-inner {
+    padding: 16px 0px 0px 16px;
+    margin: 0px;
+    font-size: 14px;
+    color: rgb(68, 138, 255);
+    text-transform: uppercase;
+}
+
+.gallery-links md-list md-list-item {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 1px 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.gallery-links md-list md-list-item md-divider {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.gallery-links md-list md-list-item .md-button {
+    padding: 0px 0px 0px 16px !important;
+    margin: 0px;
+}
+
+.gallery-links md-list md-list-item .md-button .md-list-item-inner {
+    padding: 16px 0px 16px 0px;
+    margin: 0px;
+}
+
+.gallery-links md-list md-list-item .md-button .md-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.gallery-links md-list md-list-item .md-button .md-padding h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.gallery-links md-list md-list-item .md-button .md-padding h4 {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+}
+
+.gallery-links md-list md-list-item .md-button .md-padding p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 2px 0px 0px 0px;
 }

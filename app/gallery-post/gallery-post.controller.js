@@ -8,4 +8,7 @@ GalleryPostCtrl = function($scope, $gallerypost) {
 /* Controller Configuration */
 angular.
     module('adalber.to').
-        controller('GalleryPostCtrl', ['$scope', '$gallerypost', GalleryPostCtrl]);
+        controller(
+            'GalleryPostCtrl',
+            ['$scope', '$gallerypost', GalleryPostCtrl]
+        );
