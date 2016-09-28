@@ -58,7 +58,7 @@ GalleryPostProvider = function() {
                         content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida...</p>',
                         imgSrc: 'app/gallery-post/washedout.png',
                         imgName: 'Washed Out',
-                        link: 'http://google.com'
+                        href: 'http://google.com'
                     },
                     {
                         title: 'Hello Word 2',
@@ -66,7 +66,7 @@ GalleryPostProvider = function() {
                         content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida...</p>',
                         imgSrc: 'app/gallery-post/washedout.png',
                         imgName: 'Washed Out',
-                        link: 'http://google.com'
+                        href: 'http://google.com'
                     },
                     {
                         title: 'Hello Word 1',
@@ -74,7 +74,7 @@ GalleryPostProvider = function() {
                         content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida...</p>',
                         imgSrc: 'app/gallery-post/washedout.png',
                         imgName: 'Washed Out',
-                        link: 'http://google.com'
+                        href: 'http://google.com'
                     },
                     {
                         title: 'Hello Word 2',
@@ -82,7 +82,7 @@ GalleryPostProvider = function() {
                         content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique magna non gravida...</p>',
                         imgSrc: 'app/gallery-post/washedout.png',
                         imgName: 'Washed Out',
-                        link: 'http://google.com'
+                        href: 'http://google.com'
                     }
                 ]
             }

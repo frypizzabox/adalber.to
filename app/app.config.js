@@ -1,5 +1,6 @@
 /* Basic Config */
 var pageOwner = 'Adalberto Kutuxidis';
+var currentYear = 2016;
 
 /* Module Configuration */
 angular.
@@ -40,6 +41,7 @@ angular.
         run(['$rootScope', function ($rootScope) {
 
             $rootScope.pageOwner = pageOwner;
+            $rootScope.currentYear = currentYear;
 
             $rootScope.$on('$routeChangeSuccess',
                 function (event, current, previous) {

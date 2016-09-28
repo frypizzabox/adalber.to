@@ -19,7 +19,7 @@
       <md-list flex="none" ng-repeat="relevantLink in post.relevantLinks">
         <md-subheader>{{relevantLink.category}}</md-subheader>
         <div ng-repeat="item in relevantLink.linkList">
-          <md-list-item class="md-3-line" ng-href="{{item.link}}">
+          <md-list-item class="md-3-line" ng-href="{{item.href}}">
             <div style="background: url('{{item.imgSrc}}') no-repeat;
               background-position: center center; background-size: cover; min-height: 90px; min-width: 180px;
               border-radius: 0px 0px 0px 0px;"

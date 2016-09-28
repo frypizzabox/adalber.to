@@ -5,6 +5,22 @@ nav {
     margin-top: -1px;
 }
 
+.png-icon {
+    margin-left: 12px;
+}
+
+.png-icon img {
+    width: 40px;
+    border-radius: 100px;
+}
+
+footer {
+    height: 30px;
+    background-color: black;
+    color: rgba(255,255,255,0.87);
+    font-size: 14px;
+}
+
 /*
 Gallery - Line
 */

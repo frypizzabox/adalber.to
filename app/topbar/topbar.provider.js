@@ -2,7 +2,7 @@
 TopBarProvider = function() {
 
     // Navigation links list
-    var list = [
+    var navList = [
         {
             title: 'Home',
             name: 'home',
@@ -20,10 +20,32 @@ TopBarProvider = function() {
         }
     ];
 
+    var linkList = [
+        {
+            title: 'Home',
+            name: 'home',
+            href: 'http://google.com',
+            imgSrc: 'app/topbar/octocat.png'
+        },
+        {
+            title: 'Projects',
+            name: 'projects',
+            href: 'http://google.com',
+            imgSrc: 'app/topbar/octocat.png'
+        },
+        {
+            title: 'About',
+            name: 'about',
+            href: 'http://google.com',
+            imgSrc: 'app/topbar/octocat.png'
+        }
+    ];
+
     return {
         $get: function() {
             return {
-                list: list
+                navList: navList,
+                linkList: linkList
             };
         }
     };

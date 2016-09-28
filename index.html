@@ -49,25 +49,21 @@
   </head>
   <body layout="column" ng-cloak>
 
-    <header>
+    <header ng-controller="TopBarCtrl">
       <!-- TopBar Declaration -->
       <md-toolbar class="md-padding" layout="row" flex>
         <h2 ng-bind="pageOwner"></h2>
         <div layout="row" layout-align="end center" flex>
-          <md-button class="md-fab md-mini" aria-label="Eat cake">
-            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-          </md-button>
-          <md-button class="md-fab md-mini" aria-label="Eat cake">
-            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-          </md-button>
-          <md-button class="md-fab md-mini" aria-label="Eat cake">
-            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-          </md-button>
+          <div ng-repeat="item in linkList" >
+            <a class="png-icon" ng-href="{{item.href}}">
+              <img ng-src="{{item.imgSrc}}" />
+            </a>
+          </div>
         </div>
       </md-toolbar>
 
       <!-- Navegation TopBar Declaration -->
-      <nav ng-controller="TopBarCtrl" flex>
+      <nav flex>
         <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
           <md-nav-item
             ng-repeat="item in navList"
@@ -81,5 +77,8 @@
     <!-- View Declaration -->
     <section ng-view style="overflow: auto;" flex></section>
 
+    <footer layout="row" layout-align="center center">
+      <p>© Copyright {{currentYear}} {{pageOwner}}. All rights reserved.</p>
+    </footer>
   </body>
 </html>
