@@ -27,14 +27,13 @@ TopBarProvider = function() {
     return {
         $get: function($http) {
 
-            $http.get('app/content/content.category.list.js')
+            $http.get('app/content/content.navigation.js')
                  .success(function (data) {
                     for (var i = 0; i < data.length; i++) {
                         var navOption = {
-                            id: data[i].id,
-                            title: data[i].categoryName,
-                            name: data[i].categoryName,
-                            href: '#!' + data[i].categoryName.toLowerCase()
+                            title: data[i].title,
+                            name: data[i].name,
+                            href: data[i].href
                         };
 
                         navList.push(navOption);
