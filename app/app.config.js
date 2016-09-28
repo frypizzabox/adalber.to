@@ -32,7 +32,9 @@ angular.
                         templateUrl: 'app/gallery-post/gallery-post.template.html',
                         controller: GalleryPostCtrl
                     }).
-                    otherwise('/home');
+                    otherwise({
+                        redirectTo: '/home'
+                    });
 
             }
         ]).
@@ -45,8 +47,12 @@ angular.
 
             $rootScope.$on('$routeChangeSuccess',
                 function (event, current, previous) {
-                    $rootScope.pageTitle =
-                        pageOwner + '/' + current.$$route.pageTitle;
+
+                    if(current.$$route != undefined) {
+
+                        $rootScope.pageTitle =
+                            pageOwner + '/' + current.$$route.pageTitle;
+                    }
                 }
             );
         }]).

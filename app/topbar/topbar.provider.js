@@ -1,24 +1,7 @@
 /* TopBarProvider Declaration */
 TopBarProvider = function() {
 
-    // Navigation links list
-    var navList = [
-        {
-            title: 'Home',
-            name: 'home',
-            href: '#!home'
-        },
-        {
-            title: 'Projects',
-            name: 'projects',
-            href: '#!projects'
-        },
-        {
-            title: 'About',
-            name: 'about',
-            href: '#!about'
-        }
-    ];
+    var navList = [{}];
 
     var linkList = [
         {
@@ -42,7 +25,25 @@ TopBarProvider = function() {
     ];
 
     return {
-        $get: function() {
+        $get: function($http) {
+
+            $http.get('app/content/content.category.list.js')
+                 .success(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var navOption = {
+                            id: data[i].id,
+                            title: data[i].categoryName,
+                            name: data[i].categoryName,
+                            href: '#!' + data[i].categoryName.toLowerCase()
+                        };
+
+                        navList.push(navOption);
+                    }
+                 })
+                 .error(function (data, status, headers, config) {
+                     //  Do some error handling here
+                 });
+
             return {
                 navList: navList,
                 linkList: linkList
