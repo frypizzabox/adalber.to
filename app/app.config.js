@@ -8,7 +8,7 @@ angular.
 
         /* Route Configuration */
         config(['$locationProvider', '$routeProvider',
-            function config($locationProvider, $routeProvider, $topBar) {
+            function config($locationProvider, $routeProvider, $topBarProvider) {
 
                 // Most common prefix
                 $locationProvider.hashPrefix('!');

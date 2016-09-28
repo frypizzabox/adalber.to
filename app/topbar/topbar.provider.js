@@ -27,7 +27,7 @@ TopBarProvider = function() {
     return {
         $get: function($http) {
 
-            $http.get('app/content/content.navigation.js')
+            $http.get('app/content/content.topbar.navigation.js')
                  .success(function (data) {
                     for (var i = 0; i < data.length; i++) {
                         var navOption = {
@@ -54,4 +54,4 @@ TopBarProvider = function() {
 /* Controller Declaration */
 angular.
     module('adalber.to').
-        provider('$topBar', TopBarProvider);
+        provider('$topBarProvider', TopBarProvider);
