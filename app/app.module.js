@@ -2,5 +2,6 @@
 angular.
     module('adalber.to', [
         'ngMaterial',
-        'ngRoute'
+        'ngRoute',
+        'preLoader'
     ]);

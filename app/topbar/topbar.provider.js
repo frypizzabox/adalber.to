@@ -1,12 +1,12 @@
 /* TopBarProvider Declaration */
 TopBarProvider = function() {
 
-    var navList = [{}];
-    var linkList = [{}];
+   return {
 
-    return {
+        $get: function ($http) {
 
-        $get: function($http) {
+            var navList = [{}];
+            var linkList = [{}];
 
             $http.get('app/content/content.topbar.navigation.js')
                 .success(function (data) {
@@ -16,7 +16,8 @@ TopBarProvider = function() {
                         var navOption = {
                             title: data[i].title,
                             name: data[i].name,
-                            href: data[i].href
+                            href: data[i].href,
+                            route: '/' + data[i].name.toLowerCase()
                         };
 
                         navList.push(navOption);
@@ -53,7 +54,7 @@ TopBarProvider = function() {
     };
 };
 
-/* Controller Declaration */
+/* Provider Declaration */
 angular.
     module('adalber.to').
-        provider('$topBarProvider', TopBarProvider);
+        provider('$topBar', TopBarProvider);

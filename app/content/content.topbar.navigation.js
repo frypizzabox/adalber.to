@@ -1,7 +1,6 @@
 [
     {
         "type": "list",
-        "template": "gallery",
         "category": "0",
         "contentId": "-1",
         "title": "Home",
@@ -10,7 +9,6 @@
     },
     {
         "type": "list",
-        "template": "gallery",
         "category": "0",
         "contentId": "-1",
         "title": "Projects",
@@ -19,7 +17,6 @@
     },
     {
         "type": "page",
-        "template": "gallery",
         "category": "-1",
         "contentId": "100",
         "title": "About",
@@ -28,7 +25,6 @@
     },
     {
         "type": "post",
-        "template": "gallery",
         "category": "0",
         "contentId": "200",
         "title": "Test",

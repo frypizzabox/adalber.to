@@ -7,35 +7,33 @@ angular.
     module('adalber.to').
 
         /* Route Configuration */
-        config(['$locationProvider', '$routeProvider',
-            function config($locationProvider, $routeProvider, $topBarProvider) {
+        config(['$locationProvider', '$routeProvider', 'ROUTECONFIG',
+            function ($locationProvider, $routeProvider, ROUTECONFIG) {
 
-                // Most common prefix
-                $locationProvider.hashPrefix('!');
+                console.log(ROUTECONFIG);
 
-                $routeProvider.
-                    when('/home', {
-                        pageTitle: 'Home',
-                        templateUrl: 'app/gallery-list/gallery-list.template.html',
-                        controller: GalleryListCtrl
-                    }).
-                    when('/projects', {
-                        pageTitle: 'Projects',
-                        templateUrl: 'app/gallery-list/gallery-list.template.html',
-                        controller: GalleryListCtrl
-                    }).
-                    when('/about', {
-                        pageTitle: 'About',
-                        template: '<span>About</span>'
-                    }).
-                    when('/post/:postId', {
-                        templateUrl: 'app/gallery-post/gallery-post.template.html',
-                        controller: GalleryPostCtrl
-                    }).
-                    otherwise({
-                        redirectTo: '/home'
-                    });
-
+            $routeProvider.
+                when('/home', {
+                    pageTitle: 'Home',
+                    templateUrl: 'app/gallery-list/gallery-list.template.html',
+                    controller: GalleryListCtrl
+                }).
+                when('/projects', {
+                    pageTitle: 'Projects',
+                    templateUrl: 'app/gallery-list/gallery-list.template.html',
+                    controller: GalleryListCtrl
+                }).
+                when('/about', {
+                    pageTitle: 'About',
+                    template: '<span>About</span>'
+                }).
+                when('/post/:postId', {
+                    templateUrl: 'app/gallery-post/gallery-post.template.html',
+                    controller: GalleryPostCtrl
+                }).
+                otherwise({
+                    redirectTo: '/home'
+                });
             }
         ]).
 
@@ -59,8 +57,9 @@ angular.
 
         /* Filter Configuration */
         filter('renderHTMLCorrectly', function($sce) {
-            return function (stringToParse)
-            {
+
+            return function (stringToParse) {
+
                 return $sce.trustAsHtml(stringToParse);
             }
         }).
@@ -113,3 +112,23 @@ angular.
                 .warnPalette('red')
                 .backgroundPalette('white');
         });
+
+(function() {
+
+    var initInjector = angular.injector(['ng']);
+    var $http = initInjector.get('$http');
+
+    $http.get('app/content/content.topbar.navigation.js').then(
+
+        function(response) {
+
+            angular.module('preLoader', [])
+                .constant('ROUTECONFIG', response);
+
+            angular.element(document).ready(function() {
+
+                angular.bootstrap(document, ['adalber.to']);
+            });
+        }
+    );
+})();

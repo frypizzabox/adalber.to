@@ -98,7 +98,7 @@ GalleryPostProvider = function() {
     };
 };
 
-/* Controller Declaration */
+/* Provider Declaration */
 angular.
     module('adalber.to').
         provider('$gallerypost', GalleryPostProvider);

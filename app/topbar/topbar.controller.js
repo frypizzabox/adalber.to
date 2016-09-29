@@ -1,11 +1,11 @@
 /* TopBarCtrl Declaration */
-TopBarCtrl = function($scope, $topBarProvider) {
+TopBarCtrl = function($scope, $topBar) {
 
     // Get Navigation links list from provider
-    var navList = $topBarProvider.navList;
+    var navList = $topBar.navList;
 
     // Get Top Links list from provider
-    var linkList = $topBarProvider.linkList;
+    var linkList = $topBar.linkList;
 
     // Passing values to scope
     $scope.linkList = linkList;
@@ -16,4 +16,4 @@ TopBarCtrl = function($scope, $topBarProvider) {
 /* Controller Declaration */
 angular.
     module('adalber.to').
-        controller('TopBarCtrl', ['$scope', '$topBarProvider', TopBarCtrl]);
+        controller('TopBarCtrl', ['$scope', '$topBar', TopBarCtrl]);
