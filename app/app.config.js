@@ -10,30 +10,39 @@ angular.
         config(['$locationProvider', '$routeProvider', 'ROUTECONFIG',
             function ($locationProvider, $routeProvider, ROUTECONFIG) {
 
-                console.log(ROUTECONFIG);
+                var data = ROUTECONFIG.data;
 
-            $routeProvider.
-                when('/home', {
-                    pageTitle: 'Home',
-                    templateUrl: 'app/gallery-list/gallery-list.template.html',
-                    controller: GalleryListCtrl
-                }).
-                when('/projects', {
-                    pageTitle: 'Projects',
-                    templateUrl: 'app/gallery-list/gallery-list.template.html',
-                    controller: GalleryListCtrl
-                }).
-                when('/about', {
-                    pageTitle: 'About',
-                    template: '<span>About</span>'
-                }).
-                when('/post/:postId', {
-                    templateUrl: 'app/gallery-post/gallery-post.template.html',
-                    controller: GalleryPostCtrl
-                }).
-                otherwise({
-                    redirectTo: '/home'
-                });
+                $locationProvider.hashPrefix('!');
+
+                for (var i = 0; i < data.length; i++) {
+
+                    if (data[i].type == "list") {
+
+                        $routeProvider.
+                            when('/' + data[i].name.toLowerCase(), {
+                                pageTitle: data[i].title,
+                                templateUrl: 'app/gallery-list/gallery-list.template.html',
+                                controller: GalleryListCtrl
+                            });
+                    }
+
+                    if (data[i].type == "post") {
+
+                        $routeProvider.
+                            when('/' + data[i].name.toLowerCase() + '/:postId', {
+                                templateUrl: 'app/gallery-post/gallery-post.template.html',
+                                controller: GalleryPostCtrl
+                            });
+                    }
+
+                    if (i == 0) {
+
+                        $routeProvider.
+                            otherwise({
+                                redirectTo: '/' + data[i].name.toLowerCase()
+                            });
+                    }
+                }
             }
         ]).
 
